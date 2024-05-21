@@ -6,6 +6,7 @@
     <title>스쿨버스 시간</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="buttonstyle.css">
+    <link rel="stylesheet" href="background.css">
     <script src="script.js"></script>
   </head>
   <body>
@@ -14,8 +15,9 @@
       <input type="checkbox" id="check">
       <label for="check" class="button"></label>
     </div>
-    <div id="contentA" class="content">
-      <h2>등교코스</h2>
+    <div id="goschool">
+    <div class="content">
+      <h2><font color=white>등교 버스</font></h2>
       <img src="goframefinal.png" usemap="#goschool">
       <map name="goschool">
         <area shape="circle" title="전주나들목주유소" coords="71,195,7" href="" target="">
@@ -87,9 +89,10 @@
         <area shape="circle" alt="" title="전주한마음요양병원" coords="1042,1283,9" href="" target="">
       </map>
   </div>
-  <table>
+<div>
+  <table id="busttimeA" class="table">
       <tr>
-        <td>GS칼텍스 스마트 주유소 버스&nbsp;&nbsp;&nbsp;승강장/르노삼정자동차정비코너</td>
+        <td>GS칼텍스 버스승강장/르노자동차정비</td>
         <td>07:14</td>
         <td>07:24</td>
         <td>07:25</td>
@@ -569,7 +572,7 @@
         <td></td>
       </tr>
       <tr>
-        <td>전북은행 만성법조타운지점 맞은편 전주지방법원앞 횡단보도</td>
+        <td>전북은행 맞은편 법원 앞 횡단보도</td>
         <td>07:09</td>
         <td>09:04</td>
         <td></td>
@@ -894,9 +897,11 @@
       </tr>
     </table>
 </div>
-  <div id="contentB" class="content">
-      <h2>B 버튼 클릭</h2>
+</div>
+  <div id="gohome" class="content">
+      <h2>하교 버스</h2>
       <p>B 버튼 클릭 시 display:block</p>
+  </div>
   </div>
   </body>
   
