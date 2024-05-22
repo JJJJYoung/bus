@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     showContent('A');
   });
   
@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
     contentA.style.display = "none";
     contentB.style.display = "none";
   
+
     if (content === "A") {
       contentA.style.display = "block";
     } else if (content === "B") {
