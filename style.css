@@ -9,36 +9,29 @@
     overflow: auto;
     scroll-snap-type: y mandatory;
 }
-.container{
-    width:100%;
-    height:100px;
-    background-color: #b13f3f;
-    display: flex;
-    justify-content: right;
-    scroll-snap-align: start;
-}
-.content{
+.fixed{
     text-align: center;
+    width: 100%;
     height:600px;
     overflow-y: scroll;
     user-select: none;
+
 }
-table{
-    background-color: rgb(255, 255, 255);
-    width: 70%;
+h2{
+    color: white;
+    text-align: right;
+    margin-right: 50px;
+}
+.foralign{
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid black;
-  border-collapse: collapse; /* 테두리를 겹쳐서 하나로 보이게 함 */
 }
-td{
-width: 10%;
-border: 1px solid black;
+button{
+    height: 70px;
+    width: 90px;
 }
-th:first-child, td:first-child {
-    width: 40%;
+#buttonA{
+    background-color: antiquewhite;
 }
-th:not(:first-child), td:not(:first-child) {
-    width: 6%;
+#buttonB{
+    background-color: navajowhite;
 }

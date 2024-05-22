@@ -1,0 +1,42 @@
+.gotable{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+  border-collapse: collapse; /* 테두리를 겹쳐서 하나로 보이게 함 */
+}
+.gotable td{
+width: 10%;
+border: 1px solid black;
+}
+.gotable th:first-child, .gotable td:first-child {
+    width: 40%;
+}
+.gotable th:not(:first-child), .gotable td:not(:first-child) {
+    width: 6%;
+}
+
+.backtable{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+  border-collapse: collapse; /* 테두리를 겹쳐서 하나로 보이게 함 */
+}
+.backtable td{
+width: 10%;
+border: 1px solid black;
+}
+.backtable th:first-child, .backtable td:first-child {
+    width: 30%;
+}
+.backtable th:not(:first-child), .backtable td:not(:first-child) {
+    width: 5%;
+}
+.highlight{
+    background-color: skyblue;
+}

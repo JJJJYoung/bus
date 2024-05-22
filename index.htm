@@ -1,908 +1,1281 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>스쿨버스 시간</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="buttonstyle.css">
-    <link rel="stylesheet" href="background.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div class="main">
-    <div class="container">
-      <input type="checkbox" id="check">
-      <label for="check" class="button"></label>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>스쿨버스 시간</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="buttonstyle.css">
+  <link rel="stylesheet" href="background.css">
+  <link rel="stylesheet" href="nowtime.css">
+  <link rel="stylesheet" href="table.css">
+  <script src="change.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <div id="time">현재시간은</div>
+    <script src=nowtime.js></script>
+    <div class="foralign">
+      <button id="buttonA" onclick="showContent('A')">등교</button>
+      <button id="buttonB" onclick="showContent('B')">하교</button>
     </div>
-    <div id="goschool">
-    <div class="content">
-      <h2><font color=white>등교 버스</font></h2>
-      <img src="goframefinal.png" usemap="#goschool">
-      <map name="goschool">
-        <area shape="circle" title="전주나들목주유소" coords="71,195,7" href="" target="">
-        <area shape="circle" title="호남제일문" coords="191,199,7" href="" target="" >
-        <area shape="circle" alt="제일아파트/푸른솔아파트" title="" coords="271,247,7" href="" target="">
-        <area shape="circle" alt="" title="동산역/태정주유소" coords="391,83,7" href="" target="" />
-        <area shape="circle" alt="전주에코시티KCC스위첸아파트" title="" coords="1151,27,7" href="" target="">
-        <area shape="circle" alt="전주자연초등학교" title="" coords="1223,67,7" href="" target="">
-        <area shape="circle" alt="다이소 전주에코시티점" title="" coords="1079,99,7" href="" target="">
-        <area shape="circle" alt="에코시티자이1차아파트" title="" coords="1223,127,7" href="" target="">
-        <area shape="circle" alt="K2전주송천점" title="" coords="895,207,7" href="" target="">
-        <area shape="circle" alt="신신낚시 전주점" title="" coords="1091,207,7" href="" target="">
-        <area shape="circle" alt="진가진설렁탕" title="" coords="1235,207,7" href="" target="">
-        <area shape="circle" title="하나로마트전주점" coords="319,547,7" href="" target="">
-        <area shape="circle" alt="" title="양푼집 만성점" coords="321,605,9" href="" target="">
-        <area shape="circle" alt="" title="전북은행 만성법조타운지점 맞은편 전주지방법원앞 횡단보도" coords="295,727,7" href="" target="">
-        <area shape="circle" alt="" title="만성동 성당" coords="219,807,7" href="" target="">
-        <area shape="circle" alt="" title="전주온빛중학교" coords="7,731,7" href="" target="">
-        <area shape="circle" alt="" title="실로암안과의원" coords="19,835,7" href="" target="">
-        <area shape="circle" alt="" title="전북혁신1차호반베르디움아파트" coords="87,855,7" href="" target="">
-        <area shape="circle" alt="" title="산마을오리정서곡점" coords="647,867,7" href="" target="">
-        <area shape="circle" alt="" title="서곡현대아파트" coords="659,891,7" href="" target="">
-        <area shape="circle" alt="" title="전주소바" coords="843,895,7" href="" target="">
-        <area shape="circle" alt="" title="감나무골대우대창아파트" coords="955,895,7" href="" target="">
-        <area shape="circle" alt="" title="서부신시가지아이파크아파트" coords="771,1023,7" href="" target="">
-        <area shape="circle" alt="" title="전주기전여자고등학교" coords="687,1067,7" href="" target="">
-        <area shape="circle" alt="" title="본병원" coords="907,1063,7" href="" target="">
-        <area shape="circle" alt="" title="서신아이파크이편한세상아파트" coords="1103,959,7" href="" target="">
-        <area shape="circle" alt="" title="전주진북초등학교" coords="1175,1059,7" href="" target="">
-        <area shape="circle" alt="" title="전북동물약품" coords="1323,959,7" href="" target="">
-        <area shape="circle" alt="" title="이누스 동호타일" coords="1423,1063,7" href="" target="">
-        <area shape="circle" alt="" title="전주 출입국외국인사무소" coords="1459,319,7" href="" target="">
-        <area shape="circle" alt="" title="GS칼텍스 스마트 주유소 버스 승강장/르노" coords="1549,429,9" href="" target="">
-        <area shape="circle" alt="" title="전주기린중학교" coords="1581,489,9" href="" target="">
-        <area shape="circle" alt="" title="전주역" coords="1623,587,7" href="" target="">
-        <area shape="circle" alt="" title="한국장애인고용공단 전북지사" coords="1479,659,7" href="" target="">
-        <area shape="circle" alt="" title="우아럭키아파트" coords="1715,719,7" href="" target="">
-        <area shape="circle" alt="" title="서울외과의원" coords="1595,835,7" href="" target="">
-        <area shape="circle" alt="" title="해드림공인중개사사무소" coords="1771,963,7" href="" target="">
-        <area shape="circle" alt="" title="아중마을제일2차아파트" coords="1733,1045,9" href="" target="">
-        <area shape="circle" alt="" title="자금성" coords="1013,261,9" href="" target="">
-        <area shape="circle" alt="" title="KB국민은행 송천동지점" coords="1011,387,7" href="" target="">
-        <area shape="circle" alt="" title="송천1동 주민센터" coords="999,455,7" href="" target="">
-        <area shape="circle" alt="" title="원투포차나이트" coords="1037,697,9" href="" target="">
-        <area shape="circle" alt="" title="태평양수영장로이젠금암점" coords="1229,869,9" href="" target="">
-        <area shape="circle" alt="" title="병무청오거리" coords="1503,1147,7" href="" target="">
-        <area shape="circle" alt="" title="전주호텔더프라임" coords="1293,1217,9" href="" target="">
-        <area shape="circle" alt="" title="스타벅스 전주한옥마을점" coords="1445,1293,9" href="" target="">
-        <area shape="circle" alt="" title="수생당한약방" coords="1287,1339,11" href="" target="">
-        <area shape="circle" alt="" title="전라북도청" coords="795,1183,7" href="" target="">
-        <area shape="circle" alt="" title="핸즈커피 중화산점" coords="945,1185,9" href="" target="">
-        <area shape="circle" alt="" title="롯데마트 전주점" coords="707,1235,7" href="" target="">
-        <area shape="circle" alt="" title="센텀퍼스트오피스텔" coords="829,1289,9" href="" target="">
-        <area shape="circle" alt="" title="열린새마을금고 미소지점" coords="689,1369,9" href="" target="">
-        <area shape="circle" alt="" title="소망교회" coords="755,1363,7" href="" target="">
-        <area shape="circle" alt="" title="미르피아여성병원" coords="715,1491,7" href="" target="">
-        <area shape="circle" alt="" title="서도프라자" coords="877,1441,9" href="" target="">
-        <area shape="circle" alt="" title="전주풍남중학교" coords="941,1541,9" href="" target="">
-        <area shape="circle" alt="" title="연와미당 본관" coords="1051,1467,7" href="" target="">
-        <area shape="circle" alt="" title="하서방 해물칼국수" coords="1129,1429,9" href="" target="">
-        <area shape="circle" alt="" title="나무잠자리" coords="1431,1503,7" href="" target="">
-        <area shape="circle" alt="" title="코오롱아파트" coords="1183,1667,7" href="" target="">
-        <area shape="circle" alt="" title="삼천주공4단지아파트" coords="941,1681,9" href="" target="">
-        <area shape="circle" alt="" title="평화주공생태공원" coords="1145,1821,9" href="" target="">
-        <area shape="circle" alt="" title="라자가구/BMW매장" coords="671,783,11" href="" target="">
-        <area shape="circle" alt="" title="푸른안과" coords="1321,717,9" href="" target="">
-        <area shape="circle" alt="" title="LG전자베스트샵 덕진점" coords="933,621,9" href="" target="">
-        <area shape="circle" alt="" title="금강특수유리" coords="709,485,9" href="" target="">
-        <area shape="circle" alt="" title="전주한마음요양병원" coords="1042,1283,9" href="" target="">
-      </map>
-  </div>
-<div>
-  <table id="busttimeA" class="table">
-      <tr>
-        <td>GS칼텍스 버스승강장/르노자동차정비</td>
-        <td>07:14</td>
-        <td>07:24</td>
-        <td>07:25</td>
-        <td>09:52</td>
-        <td>09:54</td>
-        <td>16:58</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>K2전주송천점</td>
-        <td>07:34</td>
-        <td>09:54</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>KB국민은행 송천동지점</td>
-        <td>07:32</td>
-        <td>10:12</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>LG전자베스트샵 덕진점</td>
-        <td>07:12</td>
-        <td>07:23</td>
-        <td>07:30</td>
-        <td>07:33</td>
-        <td>09:10</td>
-        <td>09:21</td>
-        <td>09:58</td>
-        <td>09:59</td>
-        <td>10:00</td>
-      </tr>
-      <tr>
-        <td>감나무골대우대창아파트</td>
-        <td>07:18</td>
-        <td>07:25</td>
-        <td>09:13</td>
-        <td>09:55</td>
-        <td>10:03</td>
-        <td>17:00</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>금강특수유리</td>
-        <td>07:15</td>
-        <td>07:25</td>
-        <td>07:33</td>
-        <td>07:35</td>
-        <td>17:02</td>
-        <td>09:14</td>
-        <td>09:23</td>
-        <td>10:00</td>
-        <td>10:03</td>
-      </tr>
-      <tr>
-        <td>나무잠자리</td>
-        <td>07:10</td>
-        <td>09:40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>다이소 전주에코시티점</td>
-        <td>07:32</td>
-        <td>09:52</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>동산역/태정주유소</td>
-        <td>07:22</td>
-        <td>07:32</td>
-        <td>07:36</td>
-        <td>09:56</td>
-        <td>10:00</td>
-        <td>10:02</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>라자가구/BMW매장</td>
-        <td>07:20</td>
-        <td>07:21</td>
-        <td>07:28</td>
-        <td>09:17</td>
-        <td>09:58</td>
-        <td>10:05</td>
-        <td>10:11</td>
-        <td>17:03</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>롯데마트 전주점</td>
-        <td>07:11</td>
-        <td>09:21</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>만성동 성당</td>
-        <td>07:10</td>
-        <td>07:33</td>
-        <td>09:06</td>
-        <td>09:53</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>미르피아여성병원</td>
-        <td>07:18</td>
-        <td>08:58</td>
-        <td>09:48</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>병무청오거리</td>
-        <td>07:04</td>
-        <td>07:19</td>
-        <td>09:49</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>본병원</td>
-        <td>07:20</td>
-        <td>09:40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>산마을오리정서곡점</td>
-        <td>07:20</td>
-        <td>10:02</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>삼천주공4단지아파트</td>
-        <td>07:10</td>
-        <td>09:40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>서곡현대아파트</td>
-        <td>07:18</td>
-        <td>10:00</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>서도프라자</td>
-        <td>07:15</td>
-        <td>08:55</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>서부신시가지아이파크아파트</td>
-        <td>07:15</td>
-        <td>09:57</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>서신아이파크이편한세상아파트</td>
-        <td>07:13</td>
-        <td>10:04</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>서울외과의원</td>
-        <td>07:05</td>
-        <td>09:45</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>센텀퍼스트오피스텔</td>
-        <td>07:00</td>
-        <td>09:10</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>소망교회</td>
-        <td>07:04</td>
-        <td>09:14</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>송천1동 주민센터</td>
-        <td>07:30</td>
-        <td>10:10</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>수생당한약방</td>
-        <td>07:07</td>
-        <td>09:58</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>스타벅스 전주한옥마을점</td>
-        <td>07:13</td>
-        <td>09:43</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>신신낚시 전주점</td>
-        <td>07:16</td>
-        <td>07:26</td>
-        <td>09:54</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>실로암안과의원</td>
-        <td>07:16</td>
-        <td>07:35</td>
-        <td>09:12</td>
-        <td>09:55</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>아중마을제일2차아파트</td>
-        <td>07:15</td>
-        <td>09:45</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>양푼집 만성점</td>
-        <td>07:07</td>
-        <td>09:02</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>에코시티자이1차아파트</td>
-        <td>07:27</td>
-        <td>09:47</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>연와미당 본관</td>
-        <td>07:13</td>
-        <td>09:03</td>
-        <td>09:50</td>
-        <td>09:55</td>
-        <td>16:55</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>열린새마을금고 미소지점</td>
-        <td>07:08</td>
-        <td>09:18</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>우아럭키아파트</td>
-        <td>07:10</td>
-        <td>07:20</td>
-        <td>09:49</td>
-        <td>09:50</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>원투포차나이트</td>
-        <td>07:10</td>
-        <td>07:20</td>
-        <td>07:27</td>
-        <td>09:15</td>
-        <td>09:55</td>
-        <td>09:57</td>
-        <td>16:56</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>이누스 동호타일</td>
-        <td>07:05</td>
-        <td>07:20</td>
-        <td>09:50</td>
-        <td>16:50</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>자금성</td>
-        <td>07:35</td>
-        <td>10:17</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전라북도청</td>
-        <td>07:13</td>
-        <td>09:55</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전북동물약품</td>
-        <td>07:07</td>
-        <td>07:22</td>
-        <td>09:52</td>
-        <td>16:52</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전북은행 맞은편 법원 앞 횡단보도</td>
-        <td>07:09</td>
-        <td>09:04</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전북혁신1차호반베르디움아파트</td>
-        <td>07:13</td>
-        <td>07:34</td>
-        <td>09:09</td>
-        <td>09:54</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주 출입국외국인사무소</td>
-        <td>07:15</td>
-        <td>07:25</td>
-        <td>07:32</td>
-        <td>09:53</td>
-        <td>09:55</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주기린중학교</td>
-        <td>07:13</td>
-        <td>07:23</td>
-        <td>07:24</td>
-        <td>09:51</td>
-        <td>09:53</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주기전여자고등학교</td>
-        <td>07:14</td>
-        <td>09:24</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주나들목주유소</td>
-        <td>07:24</td>
-        <td>09:24</td>
-        <td>10:06</td>
-        <td>10:09</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주소바</td>
-        <td>07:17</td>
-        <td>07:19</td>
-        <td>07:26</td>
-        <td>09:15</td>
-        <td>09:56</td>
-        <td>10:04</td>
-        <td>10:08</td>
-        <td>17:01</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주에코시티KCC스위첸아파트</td>
-        <td>07:30</td>
-        <td>09:50</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주역</td>
-        <td>07:12</td>
-        <td>07:22</td>
-        <td>09:50</td>
-        <td>09:52</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주온빛중학교</td>
-        <td>07:18</td>
-        <td>07:36</td>
-        <td>09:14</td>
-        <td>09:56</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주자연초등학교</td>
-        <td>07:29</td>
-        <td>09:49</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주진북초등학교</td>
-        <td>07:11</td>
-        <td>10:02</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주풍남중학교</td>
-        <td>07:13</td>
-        <td>09:43</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주한마음요양병원</td>
-        <td>07:15</td>
-        <td>09:05</td>
-        <td>09:52</td>
-        <td>09:58</td>
-        <td>16:57</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>전주호텔더프라임</td>
-        <td>07:09</td>
-        <td>10:00</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>제일아파트/푸른솔아파트</td>
-        <td>07:18</td>
-        <td>07:27</td>
-        <td>07:37</td>
-        <td>17:02</td>
-        <td>09:16</td>
-        <td>09:25</td>
-        <td>10:02</td>
-        <td>10:05</td>
-        <td>10:07</td>
-      </tr>
-      <tr>
-        <td>진가진설렁탕</td>
-        <td>07:25</td>
-        <td>09:45</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>코오롱아파트</td>
-        <td>07:10</td>
-        <td>09:45</td>
-        <td>09:50</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>태평양수영장로이젠금암점</td>
-        <td>07:17</td>
-        <td>07:25</td>
-        <td>09:52</td>
-        <td>09:55</td>
-        <td>16:54</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>평화주공생태공원</td>
-        <td>07:05</td>
-        <td>09:40</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>푸른안과</td>
-        <td>07:22</td>
-        <td>09:52</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>하나로마트전주점</td>
-        <td>07:05</td>
-        <td>07:22</td>
-        <td>07:23</td>
-        <td>09:00</td>
-        <td>10:00</td>
-        <td>10:07</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>하서방 해물칼국수</td>
-        <td>07:05</td>
-        <td>09:55</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>한국장애인고용공단 전북지사</td>
-        <td>07:20</td>
-        <td>09:50</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>해드림공인중개사사무소</td>
-        <td>07:18</td>
-        <td>09:47</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>핸즈커피 중화산점</td>
-        <td>07:11</td>
-        <td>09:53</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>호남제일문</td>
-        <td>07:24</td>
-        <td>09:20</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
-</div>
-</div>
-  <div id="gohome" class="content">
-      <h2>하교 버스</h2>
-      <p>B 버튼 클릭 시 display:block</p>
-  </div>
-  </div>
-  </body>
-  
+    <div id="contentA">
+      <h2>등교 버스</h2><br>
+      <div class="fixed" id="picture1">
+        <img src="goframefinal.png" usemap="#goschool">
+        <map name="goschool">
+          <area shape="circle" title="GS칼텍스 스마트 주유소 버스 승강장/르노" coords="1549,429,9" href="javascript:void(0);"
+            data-location="place1">
+          <area shape="circle" title="K2전주송천점" coords="895,207,7" href="javascript:void(0);" data-location="place2">
+          <area shape="circle" title="KB국민은행 송천동지점" coords="1011,387,7" href="javascript:void(0);"
+            data-location="place3">
+          <area shape="circle" title="LG전자베스트샵 덕진점" coords="933,621,9" href="javascript:void(0);"
+            data-location="place4">
+          <area shape="circle" title="감나무골대우대창아파트" coords="955,895,7" href="javascript:void(0);" data-location="place5">
+          <area shape="circle" title="금강특수유리" coords="709,485,9" href="javascript:void(0);" data-location="place6">
+          <area shape="circle" title="나무잠자리" coords="1431,1503,7" href="javascript:void(0);" data-location="place7">
+          <area shape="circle" title="다이소 전주에코시티점" coords="1079,99,7" href="javascript:void(0);" data-location="place8">
+          <area shape="circle" title="동산역/태정주유소" coords="391,83,7" href="javascript:void(0);" data-location="place9">
+          <area shape="circle" title="라자가구/BMW매장" coords="671,783,11" href="javascript:void(0);"
+            data-location="place10">
+          <area shape="circle" title="롯데마트 전주점" coords="707,1235,7" href="javascript:void(0);" data-location="place11">
+          <area shape="circle" title="만성동 성당" coords="219,807,7" href="javascript:void(0);" data-location="place12">
+          <area shape="circle" title="미르피아여성병원" coords="715,1491,7" href="javascript:void(0);" data-location="place13">
+          <area shape="circle" title="병무청오거리" coords="1503,1147,7" href="javascript:void(0);" data-location="place14">
+          <area shape="circle" title="본병원" coords="907,1063,7" href="javascript:void(0);" data-location="place15">
+          <area shape="circle" title="산마을오리정서곡점" coords="647,867,7" href="javascript:void(0);" data-location="place16">
+          <area shape="circle" title="삼천주공4단지아파트" coords="941,1681,9" href="javascript:void(0);"
+            data-location="place17">
+          <area shape="circle" title="서곡현대아파트" coords="659,891,7" href="javascript:void(0);" data-location="place18">
+          <area shape="circle" title="서도프라자" coords="877,1441,9" href="javascript:void(0);" data-location="place19">
+          <area shape="circle" title="서부신시가지아이파크아파트" coords="771,1023,7" href="javascript:void(0);"
+            data-location="place20">
+          <area shape="circle" title="서신아이파크이편한세상아파트" coords="1103,959,7" href="javascript:void(0);"
+            data-location="place21">
+          <area shape="circle" title="서울외과의원" coords="1595,835,7" href="javascript:void(0);" data-location="place22">
+          <area shape="circle" title="센텀퍼스트오피스텔" coords="829,1289,9" href="javascript:void(0);" data-location="place23">
+          <area shape="circle" title="소망교회" coords="755,1363,7" href="javascript:void(0);" data-location="place24">
+          <area shape="circle" title="송천1동 주민센터" coords="999,455,7" href="javascript:void(0);" data-location="place25">
+          <area shape="circle" title="수생당한약방" coords="1287,1339,11" href="javascript:void(0);" data-location="place26">
+          <area shape="circle" title="스타벅스 전주한옥마을점" coords="1445,1293,9" href="javascript:void(0);"
+            data-location="place27">
+          <area shape="circle" title="신신낚시 전주점" coords="1091,207,7" href="javascript:void(0);" data-location="place28">
+          <area shape="circle" title="실로암안과의원" coords="19,835,7" href="javascript:void(0);" data-location="place29">
+          <area shape="circle" title="아중마을제일2차아파트" coords="1733,1045,9" href="javascript:void(0);"
+            data-location="place30">
+          <area shape="circle" title="양푼집 만성점" coords="321,605,9" href="javascript:void(0);" data-location="place31">
+          <area shape="circle" title="에코시티자이1차아파트" coords="1223,127,7" href="javascript:void(0);"
+            data-location="place32">
+          <area shape="circle" title="연와미당 본관" coords="1051,1467,7" href="javascript:void(0);" data-location="place33">
+          <area shape="circle" title="열린새마을금고 미소지점" coords="689,1369,9" href="javascript:void(0);"
+            data-location="place34">
+          <area shape="circle" title="우아럭키아파트" coords="1715,719,7" href="javascript:void(0);" data-location="place35">
+          <area shape="circle" title="원투포차나이트" coords="1037,697,9" href="javascript:void(0);" data-location="place36">
+          <area shape="circle" title="이누스 동호타일" coords="1423,1063,7" href="javascript:void(0);" data-location="place37">
+          <area shape="circle" title="자금성" coords="1013,261,9" href="javascript:void(0);" data-location="place38">
+          <area shape="circle" title="전라북도청" coords="795,1183,7" href="javascript:void(0);" data-location="place39">
+          <area shape="circle" title="전북동물약품" coords="1323,959,7" href="javascript:void(0);" data-location="place40">
+          <area shape="circle" title="전북은행 만성법조타운지점 맞은편 전주지방법원앞 횡단보도" coords="295,727,7" href="javascript:void(0);"
+            data-location="place41">
+          <area shape="circle" title="전북혁신1차호반베르디움아파트" coords="87,855,7" href="javascript:void(0);"
+            data-location="place42">
+          <area shape="circle" title="전주 출입국외국인사무소" coords="1459,319,7" href="javascript:void(0);"
+            data-location="place43">
+          <area shape="circle" title="전주기린중학교" coords="1581,489,9" href="javascript:void(0);" data-location="place44">
+          <area shape="circle" title="전주기전여자고등학교" coords="687,1067,7" href="javascript:void(0);"
+            data-location="place45">
+          <area shape="circle" title="전주나들목주유소" coords="71,195,7" href="javascript:void(0);" data-location="place46">
+          <area shape="circle" title="전주소바" coords="843,895,7" href="javascript:void(0);" data-location="place47">
+          <area shape="circle" title="전주에코시티KCC스위첸아파트" coords="1151,27,7" href="javascript:void(0);"
+            data-location="place48">
+          <area shape="circle" title="전주역" coords="1623,587,7" href="javascript:void(0);" data-location="place49">
+          <area shape="circle" title="전주온빛중학교" coords="7,731,7" href="javascript:void(0);" data-location="place50">
+          <area shape="circle" title="전주자연초등학교" coords="1223,67,7" href="javascript:void(0);" data-location="place51">
+          <area shape="circle" title="전주진북초등학교" coords="1175,1059,7" href="javascript:void(0);" data-location="place52">
+          <area shape="circle" title="전주풍남중학교" coords="941,1541,9" href="javascript:void(0);" data-location="place53">
+          <area shape="circle" title="전주한마음요양병원" coords="1042,1283,9" href="javascript:void(0);"
+            data-location="place54">
+          <area shape="circle" title="전주호텔더프라임" coords="1293,1217,9" href="javascript:void(0);" data-location="place55">
+          <area shape="circle" title="제일아파트/푸른솔아파트" coords="271,247,7" href="javascript:void(0);"
+            data-location="place56">
+          <area shape="circle" title="진가진설렁탕" coords="1235,207,7" href="javascript:void(0);" data-location="place57">
+          <area shape="circle" title="코오롱아파트" coords="1183,1667,7" href="javascript:void(0);" data-location="place58">
+          <area shape="circle" title="태평양수영장로이젠금암점" coords="1229,869,9" href="javascript:void(0);"
+            data-location="place59">
+          <area shape="circle" title="평화주공생태공원" coords="1145,1821,9" href="javascript:void(0);" data-location="place60">
+          <area shape="circle" title="푸른안과" coords="1321,717,9" href="javascript:void(0);" data-location="place61">
+          <area shape="circle" title="하나로마트전주점" coords="319,547,7" href="javascript:void(0);" data-location="place62">
+          <area shape="circle" title="하서방 해물칼국수" coords="1129,1429,9" href="javascript:void(0);"
+            data-location="place63">
+          <area shape="circle" title="한국장애인고용공단 전북지사" coords="1479,659,7" href="javascript:void(0);"
+            data-location="place64">
+          <area shape="circle" title="해드림공인중개사사무소" coords="1771,963,7" href="javascript:void(0);"
+            data-location="place65">
+          <area shape="circle" title="핸즈커피 중화산점" coords="945,1185,9" href="javascript:void(0);" data-location="place66">
+          <area shape="circle" title="호남제일문" coords="191,199,7" href="javascript:void(0);" data-location="place67">
+        </map>
+      </div>
+      <div>
+        <table class="gotable">
+          <tr id="place1">
+            <td>GS칼텍스 버스승강장/르노자동차정비</td>
+            <td>07:14</td>
+            <td>07:24</td>
+            <td>07:25</td>
+            <td>09:52</td>
+            <td>09:54</td>
+            <td>16:58</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place2">
+            <td>K2전주송천점</td>
+            <td>07:34</td>
+            <td>09:54</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place3">
+            <td>KB국민은행 송천동지점</td>
+            <td>07:32</td>
+            <td>10:12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place4">
+            <td>LG전자베스트샵 덕진점</td>
+            <td>07:12</td>
+            <td>07:23</td>
+            <td>07:30</td>
+            <td>07:33</td>
+            <td>09:10</td>
+            <td>09:21</td>
+            <td>09:58</td>
+            <td>09:59</td>
+            <td>10:00</td>
+          </tr>
+          <tr id="place5">
+            <td>감나무골대우대창아파트</td>
+            <td>07:18</td>
+            <td>07:25</td>
+            <td>09:13</td>
+            <td>09:55</td>
+            <td>10:03</td>
+            <td>17:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place6">
+            <td>금강특수유리</td>
+            <td>07:15</td>
+            <td>07:25</td>
+            <td>07:33</td>
+            <td>07:35</td>
+            <td>17:02</td>
+            <td>09:14</td>
+            <td>09:23</td>
+            <td>10:00</td>
+            <td>10:03</td>
+          </tr>
+          <tr id="place7">
+            <td>나무잠자리</td>
+            <td>07:10</td>
+            <td>09:40</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place8">
+            <td>다이소 전주에코시티점</td>
+            <td>07:32</td>
+            <td>09:52</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place9">
+            <td>동산역/태정주유소</td>
+            <td>07:22</td>
+            <td>07:32</td>
+            <td>07:36</td>
+            <td>09:56</td>
+            <td>10:00</td>
+            <td>10:02</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place10">
+            <td>라자가구/BMW매장</td>
+            <td>07:20</td>
+            <td>07:21</td>
+            <td>07:28</td>
+            <td>09:17</td>
+            <td>09:58</td>
+            <td>10:05</td>
+            <td>10:11</td>
+            <td>17:03</td>
+            <td></td>
+          </tr>
+          <tr id="place11">
+            <td>롯데마트 전주점</td>
+            <td>07:11</td>
+            <td>09:21</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place12">
+            <td>만성동 성당</td>
+            <td>07:10</td>
+            <td>07:33</td>
+            <td>09:06</td>
+            <td>09:53</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place13">
+            <td>미르피아여성병원</td>
+            <td>07:18</td>
+            <td>08:58</td>
+            <td>09:48</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place14">
+            <td>병무청오거리</td>
+            <td>07:04</td>
+            <td>07:19</td>
+            <td>09:49</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place15">
+            <td>본병원</td>
+            <td>07:20</td>
+            <td>09:40</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place16">
+            <td>산마을오리정서곡점</td>
+            <td>07:20</td>
+            <td>10:02</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place17">
+            <td>삼천주공4단지아파트</td>
+            <td>07:10</td>
+            <td>09:40</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place18">
+            <td>서곡현대아파트</td>
+            <td>07:18</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place19">
+            <td>서도프라자</td>
+            <td>07:15</td>
+            <td>08:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place20">
+            <td>서부신시가지아이파크아파트</td>
+            <td>07:15</td>
+            <td>09:57</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place21">
+            <td>서신아이파크이편한세상아파트</td>
+            <td>07:13</td>
+            <td>10:04</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place22">
+            <td>서울외과의원</td>
+            <td>07:05</td>
+            <td>09:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place23">
+            <td>센텀퍼스트오피스텔</td>
+            <td>07:00</td>
+            <td>09:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place24">
+            <td>소망교회</td>
+            <td>07:04</td>
+            <td>09:14</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place25">
+            <td>송천1동 주민센터</td>
+            <td>07:30</td>
+            <td>10:10</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place26">
+            <td>수생당한약방</td>
+            <td>07:07</td>
+            <td>09:58</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place27">
+            <td>스타벅스 전주한옥마을점</td>
+            <td>07:13</td>
+            <td>09:43</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place28">
+            <td>신신낚시 전주점</td>
+            <td>07:16</td>
+            <td>07:26</td>
+            <td>09:54</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place29">
+            <td>실로암안과의원</td>
+            <td>07:16</td>
+            <td>07:35</td>
+            <td>09:12</td>
+            <td>09:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place30">
+            <td>아중마을제일2차아파트</td>
+            <td>07:15</td>
+            <td>09:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place31">
+            <td>양푼집 만성점</td>
+            <td>07:07</td>
+            <td>09:02</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place32">
+            <td>에코시티자이1차아파트</td>
+            <td>07:27</td>
+            <td>09:47</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place33">
+            <td>연와미당 본관</td>
+            <td>07:13</td>
+            <td>09:03</td>
+            <td>09:50</td>
+            <td>09:55</td>
+            <td>16:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place34">
+            <td>열린새마을금고 미소지점</td>
+            <td>07:08</td>
+            <td>09:18</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place35">
+            <td>우아럭키아파트</td>
+            <td>07:10</td>
+            <td>07:20</td>
+            <td>09:49</td>
+            <td>09:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place36">
+            <td>원투포차나이트</td>
+            <td>07:10</td>
+            <td>07:20</td>
+            <td>07:27</td>
+            <td>09:15</td>
+            <td>09:55</td>
+            <td>09:57</td>
+            <td>16:56</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place37">
+            <td>이누스 동호타일</td>
+            <td>07:05</td>
+            <td>07:20</td>
+            <td>09:50</td>
+            <td>16:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place38">
+            <td>자금성</td>
+            <td>07:35</td>
+            <td>10:17</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place39">
+            <td>전라북도청</td>
+            <td>07:13</td>
+            <td>09:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place40">
+            <td>전북동물약품</td>
+            <td>07:07</td>
+            <td>07:22</td>
+            <td>09:52</td>
+            <td>16:52</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place41">
+            <td>전북은행 맞은편 법원 앞 횡단보도</td>
+            <td>07:09</td>
+            <td>09:04</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place42">
+            <td>전북혁신1차호반베르디움아파트</td>
+            <td>07:13</td>
+            <td>07:34</td>
+            <td>09:09</td>
+            <td>09:54</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place43">
+            <td>전주 출입국외국인사무소</td>
+            <td>07:15</td>
+            <td>07:25</td>
+            <td>07:32</td>
+            <td>09:53</td>
+            <td>09:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place44">
+            <td>전주기린중학교</td>
+            <td>07:13</td>
+            <td>07:23</td>
+            <td>07:24</td>
+            <td>09:51</td>
+            <td>09:53</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place45">
+            <td>전주기전여자고등학교</td>
+            <td>07:14</td>
+            <td>09:24</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place46">
+            <td>전주나들목주유소</td>
+            <td>07:24</td>
+            <td>09:24</td>
+            <td>10:06</td>
+            <td>10:09</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place47">
+            <td>전주소바</td>
+            <td>07:17</td>
+            <td>07:19</td>
+            <td>07:26</td>
+            <td>09:15</td>
+            <td>09:56</td>
+            <td>10:04</td>
+            <td>10:08</td>
+            <td>17:01</td>
+            <td></td>
+          </tr>
+          <tr id="place48">
+            <td>전주에코시티KCC스위첸아파트</td>
+            <td>07:30</td>
+            <td>09:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place49">
+            <td>전주역</td>
+            <td>07:12</td>
+            <td>07:22</td>
+            <td>09:50</td>
+            <td>09:52</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place50">
+            <td>전주온빛중학교</td>
+            <td>07:18</td>
+            <td>07:36</td>
+            <td>09:14</td>
+            <td>09:56</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place51">
+            <td>전주자연초등학교</td>
+            <td>07:29</td>
+            <td>09:49</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place52">
+            <td>전주진북초등학교</td>
+            <td>07:11</td>
+            <td>10:02</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place53">
+            <td>전주풍남중학교</td>
+            <td>07:13</td>
+            <td>09:43</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place54">
+            <td>전주한마음요양병원</td>
+            <td>07:15</td>
+            <td>09:05</td>
+            <td>09:52</td>
+            <td>09:58</td>
+            <td>16:57</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place55">
+            <td>전주호텔더프라임</td>
+            <td>07:09</td>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place56">
+            <td>제일아파트/푸른솔아파트</td>
+            <td>07:18</td>
+            <td>07:27</td>
+            <td>07:37</td>
+            <td>17:02</td>
+            <td>09:16</td>
+            <td>09:25</td>
+            <td>10:02</td>
+            <td>10:05</td>
+            <td>10:07</td>
+          </tr>
+          <tr id="place57">
+            <td>진가진설렁탕</td>
+            <td>07:25</td>
+            <td>09:45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place58">
+            <td>코오롱아파트</td>
+            <td>07:10</td>
+            <td>09:45</td>
+            <td>09:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place59">
+            <td>태평양수영장로이젠금암점</td>
+            <td>07:17</td>
+            <td>07:25</td>
+            <td>09:52</td>
+            <td>09:55</td>
+            <td>16:54</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place60">
+            <td>평화주공생태공원</td>
+            <td>07:05</td>
+            <td>09:40</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place61">
+            <td>푸른안과</td>
+            <td>07:22</td>
+            <td>09:52</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place62">
+            <td>하나로마트전주점</td>
+            <td>07:05</td>
+            <td>07:22</td>
+            <td>07:23</td>
+            <td>09:00</td>
+            <td>10:00</td>
+            <td>10:07</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place63">
+            <td>하서방 해물칼국수</td>
+            <td>07:05</td>
+            <td>09:55</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place64">
+            <td>한국장애인고용공단 전북지사</td>
+            <td>07:20</td>
+            <td>09:50</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place65">
+            <td>해드림공인중개사사무소</td>
+            <td>07:18</td>
+            <td>09:47</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place66">
+            <td>핸즈커피 중화산점</td>
+            <td>07:11</td>
+            <td>09:53</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="place67">
+            <td>호남제일문</td>
+            <td>07:24</td>
+            <td>09:20</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="contentB">
+      <h2>하교 버스</h2><br>
+      <div class="fixed" id="picture2">
+        <img src="homeframefinal.png" usemap="#usemaphome">
+        <map name="usemaphome">
+          <area shape="circle" title="서학동" coords="1454,1386,32" href="javascript:void(0);" data-location=home15>
+          <area shape="circle" title="시청" coords="1645,655,21" href="javascript:void(0);" data-location=home3>
+          <area shape="circle" title="만성지구" coords="105,930,10" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="18,790,11" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="213,872,14" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="223,225,8" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="286,767,9" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="33,901,11" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="339,585,10" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="만성지구" coords="358,712,9" href="javascript:void(0);" data-location=home2>
+          <area shape="circle" title="본병원" coords="926,1151,15" href="javascript:void(0);" data-location=home4>
+          <area shape="circle" title="삼천동" coords="953,1813,20" href="javascript:void(0);" data-location=home5>
+          <area shape="circle" title="삼천동" coords="955,1687,16" href="javascript:void(0);" data-location=home5>
+          <area shape="circle" title="서도프라자" coords="736,1618,15" href="javascript:void(0);" data-location=home6>
+          <area shape="circle" title="서도프라자" coords="895,1560,16" href="javascript:void(0);" data-location=home6>
+          <area shape="circle" title="서부시장" coords="1099,1554,17" href="javascript:void(0);" data-location=home7>
+          <area shape="circle" title="서부시장" coords="1106,1073,21" href="javascript:void(0);" data-location=home7>
+          <area shape="circle" title="서부시장" coords="1200,1169,17" href="javascript:void(0);" data-location=home7>
+          <area shape="circle" title="서부시장" coords="1298,1448,18" href="javascript:void(0);" data-location=home7>
+          <area shape="circle" title="서부시장" coords="688,853,17" href="javascript:void(0);" data-location=home7>
+          <area shape="circle" title="송천동" coords="1023,415,15" href="javascript:void(0);" data-location=home8>
+          <area shape="circle" title="송천동" coords="1024,277,29" href="javascript:void(0);" data-location=home8>
+          <area shape="circle" title="시청" coords="1160,859,20" href="javascript:void(0);" data-location=home3>
+          <area shape="circle" title="시청" coords="1447,1163,15" href="javascript:void(0);" data-location=home3>
+          <area shape="circle" title="시청" coords="289,268,10" href="javascript:void(0);" data-location=home3>
+          <area shape="circle" title="시청" coords="742,544,19" href="javascript:void(0);" data-location=home3>
+          <area shape="circle" title="시청" coords="957,683,17" href="javascript:void(0);" data-location=home3>
+          <area shape="circle" title="신도청" coords="684,992,20" href="javascript:void(0);" data-location=home13>
+          <area shape="circle" title="신도청" coords="718,1203,18" href="javascript:void(0);" data-location=home13>
+          <area shape="circle" title="신도청" coords="779,1176,14" href="javascript:void(0);" data-location=home13>
+          <area shape="circle" title="신도청" coords="818,1281,13" href="javascript:void(0);" data-location=home13>
+          <area shape="circle" title="신도청" coords="941,1283,14" href="javascript:void(0);" data-location=home13>
+          <area shape="circle" title="아중마을" coords="1709,1023,14" href="javascript:void(0);" data-location=home9>
+          <area shape="circle" title="아중마을" coords="1761,1013,18" href="javascript:void(0);" data-location=home9>
+          <area shape="circle" title="안골사거리" coords="1112,222,20" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="안골사거리" coords="1490,361,22" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="안골사거리" coords="1562,460,18" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="안골사거리" coords="1599,538,19" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="안골사거리" coords="1609,902,20" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="안골사거리" coords="1710,753,24" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="안골사거리" coords="403,87,10" href="javascript:void(0);" data-location=home1>
+          <area shape="circle" title="에코시티" coords="1056,155,18" href="javascript:void(0);" data-location=home10>
+          <area shape="circle" title="에코시티" coords="1203,29,25" href="javascript:void(0);" data-location=home10>
+          <area shape="circle" title="에코시티" coords="1222,157,27" href="javascript:void(0);" data-location=home10>
+          <area shape="circle" title="에코시티" coords="1240,67,26" href="javascript:void(0);" data-location=home10>
+          <area shape="circle" title="에코시티" coords="1267,228,22" href="javascript:void(0);" data-location=home10>
+          <area shape="circle" title="에코시티" coords="888,219,20" href="javascript:void(0);" data-location=home10>
+          <area shape="circle" title="이동교" coords="645,1096,17" href="javascript:void(0);" data-location=home11>
+          <area shape="circle" title="이동교" coords="706,1474,22" href="javascript:void(0);" data-location=home11>
+          <area shape="circle" title="이동교" coords="719,1342,14" href="javascript:void(0);" data-location=home11>
+          <area shape="circle" title="이동교" coords="774,1484,23" href="javascript:void(0);" data-location=home11>
+          <area shape="circle" title="이동교" coords="896,1397,18" href="javascript:void(0);" data-location=home11>
+          <area shape="circle" title="평화동연방죽" coords="1046,1123,18" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="평화동연방죽" coords="1049,1396,18" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="평화동연방죽" coords="1077,1613,16" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="평화동연방죽" coords="1201,1812,17" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="평화동연방죽" coords="726,882,19" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="평화동연방죽" coords="931,975,22" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="평화동연방죽" coords="96,383,12" href="javascript:void(0);" data-location=home12>
+          <area shape="circle" title="효자동" coords="1055,1539,15" href="javascript:void(0);" data-location=home14>
+
+        </map>
+      </div>
+      <table class="backtable">
+        <tr id="home2">
+          <td>만성지구</td>
+          <td>13:40</td>
+          <td>18:00</td>
+          <td>20:50</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home4">
+          <td>본병원</td>
+          <td>13:40</td>
+          <td>17:10</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home5">
+          <td>삼천동</td>
+          <td>17:00</td>
+          <td>19:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home6">
+          <td>서도프라자</td>
+          <td>14:40</td>
+          <td>17:40</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home7">
+          <td>서부시장</td>
+          <td>14:40</td>
+          <td>17:10</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home15">
+          <td>서학동</td>
+          <td>16:40</td>
+          <td>18:30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home8">
+          <td>송천동</td>
+          <td>15:40</td>
+          <td>16:40</td>
+          <td>17:20</td>
+          <td>17:40</td>
+          <td>21:20</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home3">
+          <td>시청</td>
+          <td>13:40</td>
+          <td>14:40</td>
+          <td>15:40</td>
+          <td>16:00</td>
+          <td>17:00</td>
+          <td>17:20</td>
+          <td>17:40</td>
+          <td>18:00</td>
+          <td>18:30</td>
+          <td>19:00</td>
+          <td>20:00</td>
+          <td>20:50</td>
+          <td>21:20</td>
+          <td>22:00</td>
+        </tr>
+        <tr id="home13">
+          <td>신도청</td>
+          <td>15:40</td>
+          <td>18:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home9">
+          <td>아중마을</td>
+          <td>16:40</td>
+          <td>17:40</td>
+          <td>18:30</td>
+          <td>20:00</td>
+          <td>21:20</td>
+          <td>22:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home1">
+          <td>안골사거리</td>
+          <td>13:40</td>
+          <td>15:40</td>
+          <td>17:20</td>
+          <td>18:30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home10">
+          <td>에코시티</td>
+          <td>13:40</td>
+          <td>18:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home11">
+          <td>이동교</td>
+          <td>14:40</td>
+          <td>17:20</td>
+          <td>19:00</td>
+          <td>21:20</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>평화동연방죽</td>
+          <td>14:40</td>
+          <td>16:00</td>
+          <td>17:20</td>
+          <td>17:40</td>
+          <td>18:30</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home12">
+          <td>효자/평화동</td>
+          <td>20:50</td>
+          <td>21:20</td>
+          <td>22:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr id="home14">
+          <td>효자동</td>
+          <td>15:40</td>
+          <td>16:40</td>
+          <td>17:00</td>
+          <td>18:00</td>
+          <td>19:00</td>
+          <td>22:00</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+
+
+</body>
+<script src="highlight.js"></script>
+
+
+
 </html>
